@@ -22,7 +22,6 @@ export default{
 
 <template>
   <ul v-for="call in callLog" :key="call.number">
-    <p>{{ callLog.number }}</p>
     <callLog :callLog="call"/>
   </ul>
 </template>

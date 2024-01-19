@@ -7,11 +7,9 @@ export default{
 </script>
 
 <template>
-  <li v-if="!callLog.name && !callLog.number">
-    <p>{{ callLog }}</p>
-  </li>
-  <li v-else>
+  <li>
     <p>{{ callLog.name }}</p>
-    <p>{{ callLog.number }}</p>
+    <p v-if="!callLog.name">{{ callLog.number }}</p>
+    <p>{{ callLog.date }}</p>
   </li>
 </template>
