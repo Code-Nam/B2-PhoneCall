@@ -35,7 +35,7 @@ export default {
 			<font-awesome-icon icon="fa-solid fa-circle-plus" />
 		</button>
 	</div>
-	<contact />
+	<contact v-if="toggle" />
 	<ul v-for="contact in contacts" :key="contact.number">
 		<li>
 			<p>{{ contact.name }}</p>
