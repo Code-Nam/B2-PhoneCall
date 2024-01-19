@@ -1,29 +1,37 @@
-# b2-rendu-vuejs
+# Phone Call
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a Vue.js project that emulates a phone call. It allows users to make calls, add contacts, and log calls.
 
-## Recommended IDE Setup
+## Features 
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- **Call People**: Simulate a phone call with a simple user interface.
+- **Add Contacts**: Store and manage your contacts for easy access.
+- **Log Calls**: Keep track of your call history.
 
-## Customize configuration
+## Technologies
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- [Vue.js](https://vuejs.org/): A progressive JavaScript framework for building user interfaces.
 
-## Project Setup
+## Project Structure
 
-```sh
-npm install
-```
+- `src/App.vue`: The main Vue component.
+- `src/assets/`: Contains CSS and SVG files for styling.
+- `src/components/`: Contains Vue components for different parts of the application.
+- `src/views/`: Contains Vue components representing different views or pages in the application.
+- `src/stores/`: Contains Vuex store for managing state across the application.
+- `src/router/`: Contains Vue Router configuration for handling routing in the application.
 
-### Compile and Hot-Reload for Development
+## Setup
 
-```sh
-npm run dev
-```
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Install the project dependencies with `npm install`.
+4. Start the development server with `npm run serve`.
 
-### Compile and Minify for Production
+## Contributing
 
-```sh
-npm run build
-```
+Contributions are welcome! Please read the [contributing guide](CONTRIBUTING.md) to learn how to contribute to this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
