@@ -33,13 +33,13 @@ export default {
 
 <template>
 	<section>
-		<h2 v-if="!name">Ajouter un contact</h2>
-		<h2 v-else>{{ name }}</h2>
-		<DisplayNumber :displayNumber="number" />
-		<form @submit.prevent="addContact()">
-			<label for="name">Nom</label>
+    <form @submit.prevent="addContact()">
+      <h2 v-if="!name">Add a contact</h2>
+      <h2 v-else>{{ name }}</h2>
+      <DisplayNumber :displayNumber="number" />
+			<label for="name">Contact Name</label>
 			<input type="text" name="name" id="name" v-model="name" required />
-			<label for="number">Numéro</label>
+			<label for="number">Contact Number</label>
 			<input
 				type="number"
 				name="number"
@@ -47,7 +47,7 @@ export default {
 				v-model="number"
 				required
 			/>
-			<button type="submit">Ajouter</button>
+			<button id="submit" type="submit">Ajouter</button>
 		</form>
 	</section>
 </template>
@@ -57,5 +57,42 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
+}
+
+section{
+  display: flex;
+  justify-content: center;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #2B061E;
+  padding: 20px;
+  color: #FBBFCA;
+  
+  h2{
+    font-weight:700;
+  }
+
+  button{
+    color: #FBBFCA;
+    background-color: #875053;
+    margin-top: 1rem;
+    border: none;
+    padding: 0.5rem;
+
+    &:hover{
+      background-color: #FBBFCA;
+      color: #875053;
+      cursor: pointer;
+    }
+  }
+
+  #submit{
+    border-radius: 0;
+  }
 }
 </style>

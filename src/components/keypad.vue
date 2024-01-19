@@ -73,26 +73,7 @@ section{
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-button{
-  border: white solid 1px;
-  width: 50px;
-  margin: 5px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-
-  &:active{
-    background-color: red;
-  }
-}
-
-#call{
-  border: green solid 1px;
-
-  &:active{
-    background-color: green;
-  }
+  color: #FBBFCA;
 }
 
 .keypad {
@@ -109,5 +90,23 @@ button{
 	:nth-child(4) {
 		grid-column: 2;
 	}
+}
+
+button{
+  width: 50px;
+  height: 50px;
+  background-color: #875053;
+  color: #FBBFCA;
+  font-size: 1.5rem;
+  cursor: pointer;
+  outline: none;
+  border-radius: 50%;
+  margin: 10px;
+  padding: 10px;
+  border: none;
+
+  &:hover{
+    background-color: #ad7275;
+  }
 }
 </style>

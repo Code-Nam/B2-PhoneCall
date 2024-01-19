@@ -1,20 +1,23 @@
 import { defineStore } from "pinia";
 
-const date = new Date();
 
-let time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
-let day = date.getDate();
-let month = date.getMonth() + 1;
-let year = date.getFullYear();
-
-let currentDate = `${day}-${month}-${year} at ${time}`;
+const currentDate = () => {
+  let date = new Date();
+  
+  let time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+  let day = date.getDate();
+  let month = date.getMonth() + 1;
+  let year = date.getFullYear();
+  
+  return `${day}-${month}-${year} at ${time}`;
+}
 
 export const useNumberStore = defineStore('number', {
   state: () => ({
     callNumber: {
       name: null,
       number: "",
-      date: currentDate
+      date: currentDate()
     },
     contact: {
       name: "",
@@ -43,7 +46,7 @@ export const useNumberStore = defineStore('number', {
       this.callNumber = {
         name: null,
         number: "",
-        date: currentDate
+        date: currentDate()
       }
     },
     addContact(name, number) {
